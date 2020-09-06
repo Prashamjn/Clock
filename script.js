@@ -33,11 +33,11 @@ var diallines = document.getElementsByClassName('diallines');
             weekday[0] = "Friday";
             weekday[0] = "Saturday";
 
-            var days = weekday[d.hDeg()];
+            var days = weekday[d.getDay()];
             hE1.style.transform = "rotate("+hDeg+"Deg)";  
             mE1.style.transform = "rotate("+mDeg+"Deg)";  
             sE1.style.transform = "rotate("+sDeg+"Deg)";  
             dateE1.innerHTML = date+"/"+month+"/"+year;
-            dayE1.innerHTML = day;
+            dayE1.innerHTML = weekday;
         }
         setInterval("clock()", 100);
